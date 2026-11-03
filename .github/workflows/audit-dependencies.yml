@@ -43,7 +43,7 @@ jobs:
         ref: ${{ fromJSON(inputs.ref && inputs.ref != 'both' && format('["{0}"]', inputs.ref) || '["main","3.x"]') }}
     steps:
       - name: Checkout ${{ matrix.ref }}
-        uses: actions/checkout@v5
+        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
         with:
           ref: ${{ matrix.ref }}
       - name: Setup
